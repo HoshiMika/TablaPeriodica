@@ -1,0 +1,851 @@
+header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            border-radius: 10px;
+            color: white;
+        }
+.container {
+    width: 90%; /* Use a percentage for responsiveness */
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container */
+}
+h1 {
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+        
+table {
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 15px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .periodic-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 14px; /* Espacio uniforme en todos los lados */
+            margin: 0 auto;
+            padding: 10px;
+        }
+.nometales {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0cc;
+    /*margin-left: 20px;
+    margin-bottom: 10px;*/
+    transition: all 0.3s ease;
+        }
+        .nometales:hover {
+            background: #6ff;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: 5px 0;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.alcalino {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFDAB3;
+    transition: all 0.3s ease;
+}
+.alcalino:hover {
+    background: #bb9a7a;
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+}
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: left;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: left;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.alcalinoterreo {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #d8e251;
+    transition: all 0.3s ease;
+}
+.alcalinoterreo:hover {
+    background: #d8e251;
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+}
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: left;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: left;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.transicionales {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFB6C1;
+    transition: all 0.3s ease;
+        }
+.transicionales:hover {
+            background: #ebbcc3;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.lantanidos {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #10066eec;
+    transition: all 0.3s ease;
+        }
+.lantanidos:hover {
+            background: #6554ff;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.actinoides {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #42290c1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #7d8f0cec;
+    transition: all 0.3s ease;
+        }
+.actinoides:hover {
+            background: #f0ec0b;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.desconocidos {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #42290c1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #533b3b8a;
+    transition: all 0.3s ease;
+        }
+.desconocidos:hover {
+            background: #533b3b;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.gasesnobles {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #42290c1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #7902028a;
+    transition: all 0.3s ease;
+        }
+.gasesnobles:hover {
+            background: #e26666;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.metaloides {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #42290c1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e7c504;
+    transition: all 0.3s ease;
+        }
+.metaloides:hover {
+            background: #d8db00;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+.metalespostransicionales {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #42290c1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #00882998;
+    transition: all 0.3s ease;
+        }
+.metalespostransicionales:hover {
+            background: #03f323;
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1);
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .tooltip::after {
+            content: "";
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2c3e50 transparent transparent transparent;
+        }
+        
+        div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip h3 {
+            margin: 0 0 8px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: #ffd43b;
+        }
+        
+        .tooltip p {
+            margin: 5px 0;
+            text-align: center;
+        }
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;
+    text-align: center;
+}
+.simbolo {
+    font-size: 2em;
+    font-weight: bold;
+}
