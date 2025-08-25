@@ -1,54 +1,39 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tabla Periódica Completa</title>
-<link rel="stylesheet" href="style.css" />
+<!doctype html> <!-- Declara el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Apertura del documento HTML con idioma español -->
+<head> <!-- Sección de metadatos y enlaces -->
+<meta charset="utf-8" /> <!-- Define la codificación de caracteres como UTF-8 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura la vista para dispositivos móviles -->
+<title>Tabla Periódica Completa</title> <!-- Título de la página en la pestaña del navegador -->
+<link rel="stylesheet" href="style.css" /> <!-- Enlace al archivo CSS externo -->
 </head>
-<body>
-    <header>
-            <h1>Tabla Periódica de los Elementos</h1>
-            <p class="subtitle">Organización y clasificación de elementos químicos</p>
+<body> <!-- Cuerpo del documento -->
+    <header> <!-- Encabezado de la página -->
+            <h1>Tabla Periódica de los Elementos</h1> <!-- Título principal -->
+            <p class="subtitle">Organización y clasificación de elementos químicos</p> <!-- Subtítulo -->
         </header>
-        <section class="presentation">
-        <h1>Clase: INTRODUCCION A LOS LENGUAJES DE INTERNET</h1>
-        <h2>Estudiante: Juan David Bayona Castañeda</h2>
-        <h2>Programa: Ingeniera de software</h2>
+        <section class="presentation"> <!-- Sección de presentación -->
+        <h1>Clase: INTRODUCCION A LOS LENGUAJES DE INTERNET</h1> <!-- Información de la clase -->
+        <h2>Estudiante: Juan David Bayona Castañeda</h2> <!-- Nombre del estudiante -->
+        <h2>Programa: Ingeniera de software</h2> <!-- Programa académico -->
     </section>
-    <table>
-    <tr>
-        <td>
-            <div class="nometales">
-                <p class="atomico">Numero Atomico 1</p>
-                <p class="simbolo">H</p>
-                <p class="nombre">Nombre: Hidrogeno</p>
-                <p class="peso">Peso 1.00794</p>
-                <div class="tooltip">
-                    <h3>Hidrogeno</h3>
-                    <p><strong>Descrubrimiento: </strong>1766, Henry Cavendish</p>
-                    <p><strong>Estado: </strong>Gas</p>
-                </div>
+    <table> <!-- Inicio de la tabla periódica -->
+    <tr> <!-- Fila 1 de la tabla -->
+        <td> <!-- Celda de Hidrógeno -->
+            <div class="nometales"> <!-- Contenedor para no metales -->
+                <p class="atomico">Numero Atomico 1</p> <!-- Número atómico -->
+                <p class="simbolo">H</p> <!-- Símbolo del elemento -->
+                <p class="nombre">Nombre: Hidrogeno</p> <!-- Nombre del elemento -->
+                <p class="peso">Peso 1.00794</p> <!-- Peso atómico -->
+                <div class="tooltip"> <!-- Información adicional en tooltip -->
+                    <h3>Hidrogeno</h3> <!-- Nombre en tooltip -->
+                    <p><strong>Descrubrimiento: </strong>1766, Henry Cavendish</p> <!-- Descubrimiento -->
+                    <p><strong>Estado: </strong>Gas</p> <!-- Estado del elemento -->
+        </div>
             </div>
         </td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-            <div class="gasesnobles">
+       <td colspan="16" class="spacer"></td> <!-- Espaciador para alinear elementos -->
+        <td> <!-- Celda de Helio -->
+            <div class="gasesnobles"> <!-- Contenedor para gases nobles -->
                 <p class="atomico">Numero Atomico 2</p>
                 <p class="simbolo">He</p>
                 <p class="nombre">Nombre: Helio</p>
@@ -61,9 +46,9 @@
             </div>
         </td>
     </tr>
-    <tr>
-        <td>
-            <div class="alcalino">
+    <tr> <!-- Fila 2 de la tabla -->
+        <td> <!-- Celda de Litio -->
+            <div class="alcalino"> <!-- Contenedor para metales alcalinos -->
                 <p class="atomico">Numero Atomico 3</p>
                 <p class="simbolo">Li</p>
                 <p class="nombre">Nombre: Litio</p>
@@ -75,8 +60,8 @@
                 </div>
             </div>
         </td>
-        <td>
-            <div class="alcalinoterreo">
+        <td> <!-- Celda de Berilio -->
+            <div class="alcalinoterreo"> <!-- Contenedor para metales alcalinotérreos -->
                 <p class="atomico">Numero Atomico 4</p>
                 <p class="simbolo">Be</p>
                 <p class="nombre">Nombre: Berilio</p>
@@ -87,18 +72,9 @@
                     <p><strong>Estado: </strong>Sólido</p>
                 </div>
             </div>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-                <div class="metaloides">
+            <td colspan="10" class="spacer"><!-- Espacio para 16 columnas --></td>
+            <td> <!-- Celda de Boro -->
+                <div class="metaloides"> <!-- Contenedor para metaloides -->
                     <p class="atomico">Numero Atomico 5</p>
                     <p class="simbolo">B</p>
                     <p class="nombre">Nombre: Boro</p>
@@ -110,7 +86,7 @@
                     </div>
                 </div>
             </td>
-            <td>
+            <td> <!-- Celda de Carbono -->
                 <div class="nometales">
                     <p class="atomico">Numero Atomico 6</p>
                     <p class="simbolo">C</p>
@@ -123,7 +99,7 @@
                     </div>
                 </div>
             </td>
-            <td>
+            <td> <!-- Celda de Nitrógeno -->
                 <div class="nometales">
                     <p class="atomico">Numero Atomico 7</p>
                     <p class="simbolo">N</p>
@@ -136,7 +112,7 @@
                     </div>
                 </div>
             </td>
-            <td>
+            <td> <!-- Celda de Oxígeno -->
                 <div class="nometales">
                     <p class="atomico">Numero Atomico 8</p>
                     <p class="simbolo">O</p>
@@ -149,7 +125,7 @@
                     </div>
                 </div>
             </td>
-            <td>
+            <td> <!-- Celda de Flúor -->
                 <div class="nometales">
                     <p class="atomico">Numero Atomico 9</p>
                     <p class="simbolo">F</p>
@@ -162,7 +138,7 @@
                     </div>
                 </div>
             </td>
-            <td>
+            <td> <!-- Celda de Neón -->
                 <div class="gasesnobles">
                     <p class="atomico">Numero Atomico 10</p>
                     <p class="simbolo">Ne</p>
@@ -203,16 +179,7 @@
                 </div>
             </div>
         </td>
-        <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <td colspan="10" class="spacer"><!-- Espacio para 16 columnas --></td>
             <td>
                 <div class="metalespostransicionales">
                     <p class="atomico">Numero Atomico 13</p>
@@ -1237,9 +1204,7 @@
                     </div>
                 </div>
         </tr>
-            <td></td>
-            <td></td>
-            <td></td>
+          <td colspan="3" class="spacer"><!-- Espacio para 3 columnas --></td>
         <td>
             <div class="lantanidos">
                 <p class="atomico">Numero Atomico 58</p>
@@ -1422,9 +1387,7 @@
                 </div>
             </td>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td colspan="3" class="spacer"><!-- Espacio para 3 columnas --></td>
                 <td>
                     <div class="actinoides">
                         <p class="atomico">Numero Atomico 90</p>
@@ -1608,10 +1571,9 @@
                     </div>
                 </td>
             </tr>
-            <tr></tr>
-            <tr></tr>
+            
             </tr>
     </tr>   
-    </table>
-</body>
-</html>
+    </table> <!-- Final de la tabla periódica -->
+</body> <!-- Cierre del cuerpo del documento -->
+</html> <!-- Cierre del documento HTML con idioma español -->

@@ -1,114 +1,125 @@
+/* Estilos para el encabezado */
 header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 15px;
-            background: linear-gradient(to right, #2c3e50, #4ca1af);
-            border-radius: 10px;
-            color: white;
-        }
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 30px; /* Espacio inferior de 30px */
+    padding: 15px; /* Relleno interno de 15px */
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Fondo con gradiente lineal */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Color de texto blanco */
+}
+/* Contenedor principal */
 .container {
-    width: 90%; /* Use a percentage for responsiveness */
-    max-width: 1200px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the container */
+    width: 90%; /* Ancho del 90% del contenedor padre */
+    max-width: 1200px; /* Ancho máximo de 1200px */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
+/* Estilos para el título principal */
 h1 {
-            font-size: 2.8rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 10px;
-        }
-        
-table {
-            margin: 0 auto;
-            border-collapse: separate;
-            border-spacing: 15px;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .periodic-table {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 14px; /* Espacio uniforme en todos los lados */
-            margin: 0 auto;
-            padding: 10px;
-        }
-.nometales {
-    width: 150px;
-    height: 150px;
-    border: 3px solid #333;
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #0cc;
-    /*margin-left: 20px;
-    margin-bottom: 10px;*/
-    transition: all 0.3s ease;
-        }
-        .nometales:hover {
-            background: #6ff;
-            -webkit-transform: scale(1.1); 
-            transform: scale(1.1);
-        }
-/* Tooltip styling */
-        .tooltip {
-            visibility: hidden;
-            width: 200px;
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 12px;
-            position: absolute;
-            z-index: 100;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            font-size: 14px;
-            line-height: 1.4;
-        }
-        
-        .tooltip::after {
-            content: 5px 0;
-            text-align: center;
-            top: 50%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #2c3e50 transparent transparent transparent;
-        }
-        
-        div:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        .tooltip h3 {
-            margin: 0 0 8px 0;
-            padding-bottom: 5px;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            color: #ffd43b;
-        }
-        
-        .tooltip p {
-            margin: 5px 0;
-            text-align: center;
-        }
-.atomico, .simbolo, .nombre, .peso {
-    margin: 5px 0;
-    text-align: center;
+    font-size: 2.8rem; /* Tamaño de fuente de 2.8rem */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    margin-bottom: 10px; /* Espacio inferior de 10px */
 }
+
+/* Estilos para la tabla */
+table {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    border-collapse: separate; /* Separa los bordes de las celdas */
+    border-spacing: 15px; /* Espacio entre celdas de 15px */
+}
+.subtitle {
+    font-size: 1.2rem; /* Tamaño de fuente de 1.2rem */
+    opacity: 0.9; /* Opacidad del 90% */
+}
+
+/* Contenedor de la tabla periódica con grid */
+.periodic-table {
+    display: grid; /* Usa grid para el diseño */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Columnas responsivas */
+    gap: 14px; /* Espacio entre elementos de 14px */
+    margin: 0 auto; /* Centra el grid horizontalmente */
+    padding: 10px; /* Relleno interno de 10px */
+}
+.nometales {
+    width: 150px; /* Ancho de 150px */
+    height: 150px; /* Alto de 150px */
+    border: 3px solid #333; /* Borde sólido de 3px */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.1); /* Sombra */
+    display: flex; /* Usa flexbox para alineación */
+    flex-direction: column; /* Dirección de columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    background: #0cc; /* Color de fondo */
+    transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+.nometales:hover {
+    background: #6ff; /* Cambia color de fondo al pasar el mouse */
+    transform: scale(1.1); /* Escala al 110% al pasar el mouse */
+}
+/* ========== ESTILOS PARA TOOLTIPS (VENTANAS EMERGENTES INFORMATIVAS) ========== */
+.tooltip {
+    visibility: hidden;        /* Oculta el tooltip inicialmente */
+    width: 200px;              /* Ancho fijo del tooltip */
+    background-color: #2c3e50; /* Color de fondo azul oscuro */
+    color: white;              /* Color de texto blanco */
+    text-align: center;        /* Centra el texto horizontalmente */
+    border-radius: 6px;        /* Bordes redondeados */
+    padding: 12px;             /* Espaciado interno */
+    position: absolute;        /* Posicionamiento absoluto para ubicación precisa */
+    z-index: 100;              /* Alto índice z para asegurar que esté por encima de otros elementos */
+    bottom: 125%;              /* Posiciona el tooltip arriba del elemento padre (125% de la altura del elemento) */
+    left: 50%;                 /* Centra horizontalmente respecto al elemento padre */
+    transform: translateX(-50%); /* Ajusta el centrado compensando el 50% del ancho del tooltip */
+    opacity: 0;                /* Inicialmente transparente (completamente invisible) */
+    transition: opacity 0.3s;  /* Transición suave de 0.3 segundos para la propiedad opacidad */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra para efecto de elevación */
+    font-size: 14px;           /* Tamaño de fuente */
+    line-height: 1.4;          /* Altura de línea para mejor legibilidad */
+}
+
+/* Pseudoelemento que crea la flecha indicadora del tooltip */
+.tooltip::after {
+    content: "";               /* Contenido vacío necesario para pseudoelementos */
+    position: absolute;        /* Posicionamiento absoluto para ubicación precisa */
+    top: 100%;                 /* Coloca la flecha en la parte inferior del tooltip */
+    left: 50%;                 /* Centra horizontalmente la flecha */
+    margin-left: -5px;         /* Ajusta el centrado de la flecha */
+    border-width: 5px;         /* Tamaño de la flecha */
+    border-style: solid;       /* Estilo de borde sólido para formar el triángulo */
+    border-color: #2c3e50 transparent transparent transparent; /* Crea triángulo apuntando hacia abajo (color arriba, transparente lados y abajo) */
+}
+
+/* Muestra el tooltip cuando se hace hover sobre el elemento contenedor div */
+div:hover .tooltip {
+    visibility: visible;       /* Hace visible el tooltip */
+    opacity: 1;                /* Establece opacidad completa (totalmente visible) */
+}
+
+/* Estilos para el título dentro del tooltip */
+.tooltip h3 {
+    margin: 0 0 8px 0;        /* Margen inferior de 8px, elimina margen superior */
+    padding-bottom: 5px;       /* Espaciado inferior interno */
+    border-bottom: 1px solid rgba(255,255,255,0.3); /* Línea divisoria sutil con opacidad */
+    color: #ffd43b;            /* Color amarillo dorado para el título */
+}
+
+/* Estilos para párrafos dentro del tooltip */
+.tooltip p {
+    margin: 5px 0;             /* Margen vertical de 5px entre párrafos */
+    text-align: center;        /* Centra el texto de los párrafos */
+}
+
+/* ========== ESTILOS COMUNES PARA ELEMENTOS DE LA TABLA PERIÓDICA ========== */
+.atomico, .simbolo, .nombre, .peso {
+    margin: 5px 0;             /* Margen vertical de 5px entre estos elementos */
+    text-align: center;        /* Centra el texto horizontalmente */
+}
+
+/* Estilos específicos para el símbolo del elemento */
 .simbolo {
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 2em;            /* Tamaño de fuente grande (2 veces el tamaño base) */
+    font-weight: bold;         /* Texto en negrita para mayor énfasis */
 }
 .alcalino {
     width: 150px;
